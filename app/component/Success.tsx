@@ -44,17 +44,17 @@ const Success: React.FC<SuccessProps> = ({ input }) => {
       });
   };
   return (
-    <div>
+    <div className='w-full'>
       <div className="flex flex-col">
         <button
           onClick={handleCopyClick}
-          className="bg-green-500 px-3 py-2 rounded   text-white hover:bg-green-600 hover:rounded-md transition"
+          className="bg-green-500 px-3 py-2 rounded text-white hover:bg-green-600 hover:rounded-md transition"
         >
           Copy
         </button>
         <Link href={`${DOMAIN_URL}/meme/${input}/7`}>
           <p className="p-4 bg-gray-200 m-2 rounded text-sm">
-            {DOMAIN_URL}/meme/{input}/7
+            {DOMAIN_URL}<br/>/meme/{input}/7
           </p>
         </Link>
       </div>
