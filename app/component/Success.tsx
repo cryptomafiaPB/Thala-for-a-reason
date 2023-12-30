@@ -15,7 +15,7 @@ const Success: React.FC<SuccessProps> = ({ input }) => {
   // const [textToCopy, setTextToCopy] = useState<string>('');
   // setTextToCopy(`http://localhost:3000/meme/${input}`);
   const handleCopyClick = () => {
-    clipboardCopy(`http://localhost:3000/meme/${input}`)
+    clipboardCopy(`${DOMAIN_URL}/meme/${input}/7`)
       .then(() => {
         console.log('Text copied to clipboard!');
         toast.success('🦄 Copied!', {
