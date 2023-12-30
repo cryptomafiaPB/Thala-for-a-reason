@@ -5,7 +5,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import clipboardCopy from 'clipboard-copy';
 import Link from 'next/link';
 import React from 'react';
-export default function Success({ input }) {
+
+interface SuccessProps {
+  input: string;
+}
+
+const Success: React.FC<SuccessProps> = ({ input }) => {
+  const DOMAIN_URL = process.env.NEXT_PUBLIC_DOMAIN_URL;
   // const [textToCopy, setTextToCopy] = useState<string>('');
   // setTextToCopy(`http://localhost:3000/meme/${input}`);
   const handleCopyClick = () => {
@@ -46,9 +52,9 @@ export default function Success({ input }) {
         >
           Copy
         </button>
-        <Link href={`http://localhost:3000/meme/${input}`}>
+        <Link href={`${DOMAIN_URL}/meme/${input}/7`}>
           <p className="p-4 bg-gray-200 m-2 rounded text-sm">
-            http://localhost:3000/meme/{input}
+            {DOMAIN_URL}/meme/{input}/7
           </p>
         </Link>
       </div>
@@ -63,3 +69,4 @@ export default function Success({ input }) {
     </div>
   );
 }
+export default Success

@@ -2,8 +2,8 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
-import Success from './container/Success';
-import Fail from './container/Fail';
+import Success from './component/Success';
+import Fail from './component/Fail';
 import Image from 'next/image';
 import Link from 'next/link';
 export default function Home() {

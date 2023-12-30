@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import { useEffect } from 'react';
-export default function Fail({ input }) {
+import React from 'react';
+
+interface SuccessProps {
+  input: string;
+}
+
+const Fail: React.FC<SuccessProps> = ({ input }) => {
   const playAudio = () => {
     const audio = new Audio('/Moye Moye Song Sound Effect.mp3');
     audio.play();
@@ -17,3 +23,4 @@ export default function Fail({ input }) {
     </div>
   );
 }
+export default Fail
